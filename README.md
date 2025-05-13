@@ -25,9 +25,12 @@ conda activate yolov-comparison
 
 # 4. Launch Jupyter
 jupyter notebook
-```
+
 ```
 ### 2. Pip + venv
+
+
+```
 
 # 1. Clone the repo
 git clone https://github.com/your-username/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis.git
@@ -44,8 +47,10 @@ pip install -r requirements.txt   # generate via `pip freeze > requirements.txt`
 # 4. Launch Jupyter
 jupyter notebook
 ```
-```
 ### 3. Docker
+
+```
+
 
 #### Prerequisites
 1. Install Docker Desktop (Windows/macOS): https://www.docker.com/products/docker-desktop  
@@ -70,11 +75,15 @@ EXPOSE 8888
 CMD ["bash", "-lc", "jupyter notebook --ip=0.0.0.0 --no-browser --allow-root"]
 
 ```
+### Build the iamge
 
 ```
 docker build -t yolov-comparison:latest .
 
 ```
+### Run the container
+
+#### CPU Only:
 ```
 docker run \
   -p 8888:8888 \
@@ -82,18 +91,8 @@ docker run \
   yolov-comparison:latest
 ```
 
+#### NVIDIA GPU
 ```
-### Run the container:
-#### (CPU Only)
-
-docker run \
-  -p 8888:8888 \
-  -v "$(pwd)":/workspace \
-  yolov-comparison:latest
-
-```
-```
-#### With NVIDIA GPU:
 docker run --gpus all \
   -p 8888:8888 \
   -v "$(pwd)":/workspace \
