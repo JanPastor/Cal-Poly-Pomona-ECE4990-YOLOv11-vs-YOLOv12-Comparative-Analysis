@@ -70,6 +70,8 @@ EXPOSE 8888
 CMD ["bash", "-lc", "jupyter notebook --ip=0.0.0.0 --no-browser --allow-root"]
 
 ```
+
+```
 docker build -t yolov-comparison:latest .
 
 ```
@@ -78,9 +80,8 @@ docker run \
   -p 8888:8888 \
   -v "$(pwd)":/workspace \
   yolov-comparison:latest
-
-
 ```
+
 ```
 ### Run the container:
 #### (CPU Only)
