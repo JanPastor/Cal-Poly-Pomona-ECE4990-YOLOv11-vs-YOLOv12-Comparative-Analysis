@@ -8,9 +8,12 @@ This project delivers a head-to-head comparative study of the YOLOv11 and YOLOv1
 
 ## 🚀 Quick Start (no installs!)
 
-### Open in Google Colab
-[![Open YOLOv11 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JanPastor/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis/blob/main/notebooks/yolov11/YOLOv11.ipynb)
-[![Open YOLOv12 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JanPastor/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis/blob/main/notebooks/yolov12/YOLOv12.ipynb)
+### Open YOLOv11 in Colab  
+[![Colab YOLOv11 Notebook](https://img.shields.io/badge/Colab-YOLOv11%20Notebook-blue?logo=google-colab)](https://colab.research.google.com/github/JanPastor/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis/blob/main/notebooks/yolov11/YOLOv11.ipynb)
+
+### Open YOLOv12 in Colab  
+[![Colab YOLOv12 Notebook](https://img.shields.io/badge/Colab-YOLOv12%20Notebook-blue?logo=google-colab)](https://colab.research.google.com/github/JanPastor/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis/blob/main/notebooks/yolov12/YOLOv12.ipynb)
+
 
 ### Launch via Binder
 [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JanPastor/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis/main?urlpath=lab/tree/notebooks)
