@@ -25,7 +25,8 @@ conda activate yolov-comparison
 
 # 4. Launch Jupyter
 jupyter notebook
-
+```
+```
 ### 2. Pip + venv
 
 # 1. Clone the repo
@@ -42,7 +43,8 @@ pip install -r requirements.txt   # generate via `pip freeze > requirements.txt`
 
 # 4. Launch Jupyter
 jupyter notebook
-
+```
+```
 ### 3. Docker
 
 # 1. Build the Docker image
@@ -53,3 +55,5 @@ docker run --gpus all -p 8888:8888 \
   -v $(pwd):/workspace/yolo-compare \
   yolov-comparison:latest \
   jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
+
+```
