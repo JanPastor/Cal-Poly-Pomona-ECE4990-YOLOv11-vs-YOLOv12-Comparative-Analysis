@@ -47,13 +47,61 @@ jupyter notebook
 ```
 ### 3. Docker
 
-# 1. Build the Docker image
-docker build -t yolov-comparison:latest .
+#### Prerequisites
+1. Install Docker Desktop (Windows/macOS): https://www.docker.com/products/docker-desktop  
+2. (Optional, for GPU) Install NVIDIA Container Toolkit and enable WSL 2 integration.
 
-# 2. Run a container with Jupyter exposed on port 8888
-docker run --gpus all -p 8888:8888 \
-  -v $(pwd):/workspace/yolo-compare \
-  yolov-comparison:latest \
-  jupyter notebook --ip=0.0.0.0 --no-browser --allow-root
+#### Dockerfile
+Create a file named `Dockerfile` at the repo root with these contents:
+```dockerfile
+FROM python:3.8-slim
+WORKDIR /workspace
+COPY environment.yml ./
+RUN apt-get update -y && apt-get install -y wget bzip2 \
+  && wget --quiet https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh \
+  && bash /tmp/miniconda.sh -b -p /opt/conda \
+  && rm /tmp/miniconda.sh \
+  && /opt/conda/bin/conda env create -f environment.yml \
+  && ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh \
+  && echo "conda activate yolov-comparison" >> ~/.bashrc \
+  && apt-get clean && rm -rf /var/lib/apt/lists/*
+COPY . .
+EXPOSE 8888
+CMD ["bash", "-lc", "jupyter notebook --ip=0.0.0.0 --no-browser --allow-root"]
 
 ```
+docker build -t yolov-comparison:latest .
+
+```
+```
+docker run \
+  -p 8888:8888 \
+  -v "$(pwd)":/workspace \
+  yolov-comparison:latest
+
+
+```
+```
+### Run the container:
+#### (CPU Only)
+
+docker run \
+  -p 8888:8888 \
+  -v "$(pwd)":/workspace \
+  yolov-comparison:latest
+
+```
+```
+#### With NVIDIA GPU:
+docker run --gpus all \
+  -p 8888:8888 \
+  -v "$(pwd)":/workspace \
+  yolov-comparison:latest
+
+
+```
+Tip: After launching Jupyter, open your browser to
+http://localhost:8888
+and navigate into the notebooks/yolov11/ or notebooks/yolov12/ folders to run your experiments.
+
+
