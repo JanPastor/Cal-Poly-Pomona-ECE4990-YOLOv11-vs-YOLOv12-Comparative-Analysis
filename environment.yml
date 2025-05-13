@@ -1,0 +1,16 @@
+name: yolov-comparison
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - pip:
+    - ultralytics
+    - torch
+    - torchvision
+    - numpy
+    - pandas
+    - matplotlib
+    - jupyter
+    - opencv-python
