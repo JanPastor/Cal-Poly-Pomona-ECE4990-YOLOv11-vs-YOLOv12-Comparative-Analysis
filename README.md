@@ -6,6 +6,16 @@
 ## Abstract
 This project delivers a head-to-head comparative study of the YOLOv11 and YOLOv12 object-detection architectures. We leveraged Ultralytics’ pretrained models on both the VisDrone aerial imagery dataset and the COCO val2017 dataset, retraining and evaluating on Google Colab’s A100 GPUs. Our evaluation metrics include mean average precision (mAP@0.5), inference latency (ms/image), precision-recall curves, confusion matrices, and F1-scores. By systematically capturing these performance curves and resource footprints, we identify the architectural refinements in YOLOv12 and quantify their impact on detection accuracy and real-time suitability, offering guidance for deployment in resource-constrained vision systems.
 
+## 🚀 Quick Start (no installs!)
+
+### Open in Google Colab
+[![YOLOv11 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JanPastor/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis/blob/main/notebooks/yolov11/YOLOv11.ipynb)
+[![YOLOv12 in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JanPastor/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis/blob/main/notebooks/yolov12/YOLOv12.ipynb)
+
+### Launch via Binder
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JanPastor/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis/main?urlpath=lab/tree/notebooks)
+
+
 ## Installation
 
 You have three main options to install and run this project environment. Pick one that fits your workflow:
