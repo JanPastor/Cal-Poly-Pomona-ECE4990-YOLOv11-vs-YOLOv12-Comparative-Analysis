@@ -26,6 +26,8 @@ conda activate yolov-comparison
 # 4. Launch Jupyter
 jupyter notebook
 
+### 2. Pip + venv
+
 # 1. Clone the repo
 git clone https://github.com/your-username/Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis.git
 cd Cal-Poly-Pomona-ECE4990-YOLOv11-vs-YOLOv12-Comparative-Analysis
@@ -40,6 +42,8 @@ pip install -r requirements.txt   # generate via `pip freeze > requirements.txt`
 
 # 4. Launch Jupyter
 jupyter notebook
+
+### 3. Docker
 
 # 1. Build the Docker image
 docker build -t yolov-comparison:latest .
