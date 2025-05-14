@@ -1,6 +1,6 @@
 # Cal Poly Pomona ECE4990: YOLOv11 vs. YOLOv12 Comparative Analysis
 
-**Authors:** Jan D. Pastor, Vince Madrigal & Raj Gokidi  
+**Authors:** Jan D. Pastor, Vince Madrigal
 **Course:** ECE 4990.3 – Computer Vision, Spring 2024–25
 
 ## Abstract
